@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soham Mhatre - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --primary: #ffffff;
+      --accent: #1a1a1a;
+      --card-bg: #1a1a1a;
+      --card-shadow: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      transition: 0.3s ease;
+      overflow-x: hidden;
+      padding-top: 180px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 2rem 1rem;
+      background: #000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text);
+      border-bottom: 1px solid #333;
+    }
+
+    .intro {
+      flex: 1;
+      padding-right: 2rem;
+      min-width: 250px;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+    }
+
+    .profile-pic {
+      flex-shrink: 0;
+      margin-top: 1rem;
+    }
+
+    .profile-pic img {
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+    }
+
+    nav {
+      background-color: var(--accent);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 160px;
+      z-index: 999;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-left: 5px solid var(--primary);
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .skills ul, .contact-info ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skills ul li, .contact-info ul li {
+      background: var(--accent);
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .project {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px var(--card-shadow);
+      margin-bottom: 2rem;
+    }
+
+    .project h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .project img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      filter: grayscale(100%);
+      transition: 0.5s;
+    }
+
+    .project img:hover {
+      transform: scale(1.02);
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #444;
+      border-radius: 8px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: #000;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    }
+
+    button:hover {
+      background-color: #fff;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #000;
+      color: white;
+    }
+
+    a {
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="intro">
+      <h1>Hello, I'm Soham Mhatre</h1>
+      <p>I build sleek and minimal digital experiences</p>
+    </div>
+    <div class="profile-pic">
+      <img src="profile.jpg" alt="Soham Mhatre Profile Picture" />
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Soham Mhatre, a black-and-white minimalist coder who transforms designs into pixel-perfect websites. Simplicity meets function in my world.</p>
+    <div class="skills">
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>PYTHON</li>
+        <li>C++</li>
+        <li>SQL</li>
+        <li>MONGODB</li>
+        <li>PHOTOSHOP</li>
+        <li>POWER BI</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="https://via.placeholder.com/800x400/000000/FFFFFF?text=Home+Rental+Website" alt="Home Rental Website Screenshot">
+      <h3>Home Rental Website</h3>
+      <p>A modern, minimalistic platform where users can search, book, and list rental properties. Includes filtering, map integration, and booking features.</p>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/800x400/000000/FFFFFF?text=OTT+Dashboard" alt="OTT Platform Dashboard">
+      <h3>OTT Platform Dashboard</h3>
+      <p>A dashboard built to analyze user engagement, watch time, and content performance using real-time data visualizations powered by Power BI.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <h3>Let's Connect</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/253019-soham-mhatre" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="https://github.com/SoHaM-250143" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        <li><a href="mailto:sohamrmhatre125@gmail.com"><i class="fas fa-envelope"></i> Email Me</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Soham Mhatre. Designed with simplicity.</p>
+  </footer>
+
+</body>
+</html>
