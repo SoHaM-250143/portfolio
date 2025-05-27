@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soham Mhatre - Portfolio</title>
+  <title>Black & White Portfolio - Soham Mhatre</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     :root {
       --bg: #000000;
@@ -21,37 +20,33 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
     }
 
     body {
       background-color: var(--bg);
       color: var(--text);
-      padding-top: 180px;
+      transition: 0.3s ease;
+      overflow-x: hidden;
     }
 
     header {
-      position: fixed;
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
       z-index: 1000;
-      padding: 2rem 1rem;
-      background: #000;
+      padding: 3rem 1rem 2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      color: var(--text);
+      background: #000000;
+      animation: fadeInDown 1s ease-out;
       border-bottom: 1px solid #333;
-      animation: fadeSlideDown 1s ease-in-out;
     }
 
     .intro {
       flex: 1;
       padding-right: 2rem;
       min-width: 250px;
-      animation: fadeInText 1.5s ease-in-out;
     }
 
     .intro h1 {
@@ -82,9 +77,9 @@
       justify-content: center;
       gap: 2rem;
       position: sticky;
-      top: 160px;
+      top: 120px;
       z-index: 999;
-      animation: fadeIn 2s ease-in;
+      border-bottom: 1px solid #333;
     }
 
     nav a {
@@ -102,14 +97,7 @@
       padding: 4rem 1rem;
       max-width: 1000px;
       margin: auto;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 1s ease-out, transform 1s ease-out;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
+      animation: fadeInUp 1.2s ease-in-out;
     }
 
     h2 {
@@ -117,7 +105,6 @@
       border-left: 5px solid var(--primary);
       padding-left: 1rem;
       margin-bottom: 2rem;
-      animation: fadeInText 1s ease-in-out;
     }
 
     .skills ul, .contact-info ul {
@@ -130,9 +117,6 @@
       padding: 0.5rem 1rem;
       margin: 0.5rem 0;
       border-radius: 8px;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
       transition: transform 0.3s;
     }
 
@@ -146,7 +130,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 15px var(--card-shadow);
       margin-bottom: 2rem;
-      animation: fadeIn 1.5s ease-in-out;
+      animation: fadeInUp 1s ease forwards;
     }
 
     .project h3 {
@@ -187,9 +171,9 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: 0.3s;
       box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-      animation: popIn 1s ease;
+      animation: fadeIn 2s ease-in;
     }
 
     button:hover {
@@ -209,30 +193,21 @@
 
     a {
       color: var(--primary);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
     }
 
-    /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
 
-    @keyframes fadeSlideDown {
-      from { opacity: 0; transform: translateY(-30px); }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeInText {
-      from { opacity: 0; transform: translateX(-20px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes popIn {
-      0% { transform: scale(0.9); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -244,7 +219,7 @@
       <p>I build sleek and minimal digital experiences</p>
     </div>
     <div class="profile-pic">
-      <img src="profile.jpg" alt="Soham Mhatre Profile Picture" />
+      <img src="profile.jpg" alt="Soham Mhatre Profile Picture">
     </div>
   </header>
 
@@ -275,14 +250,14 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-      <img src="https://via.placeholder.com/800x400/000000/FFFFFF?text=Home+Rental+Website" alt="Home Rental Website Screenshot">
+      <img src="https://via.placeholder.com/800x400/000000/FFFFFF?text=Home+Rental+Site" alt="Home Rental Website Screenshot">
       <h3>Home Rental Website</h3>
-      <p>A modern, minimalistic platform where users can search, book, and list rental properties. Includes filtering, map integration, and booking features.</p>
+      <p>A minimalist website where users can browse, list, and filter rental properties. Designed with clarity and ease-of-use in mind.</p>
     </div>
     <div class="project">
-      <img src="https://via.placeholder.com/800x400/000000/FFFFFF?text=OTT+Dashboard" alt="OTT Platform Dashboard">
+      <img src="https://via.placeholder.com/800x400/000000/FFFFFF?text=OTT+Dashboard" alt="OTT Dashboard Screenshot">
       <h3>OTT Platform Dashboard</h3>
-      <p>A dashboard built to analyze user engagement, watch time, and content performance using real-time data visualizations powered by Power BI.</p>
+      <p>An admin dashboard for managing content, subscriptions, and analytics on an OTT platform. Clean dark UI with charts and user insights.</p>
     </div>
   </section>
 
@@ -297,9 +272,9 @@
     <div class="contact-info">
       <h3>Let's Connect</h3>
       <ul>
-        <li><a href="https://www.linkedin.com/in/253019-soham-mhatre" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="https://github.com/SoHaM-250143" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-        <li><a href="mailto:sohamrmhatre125@gmail.com"><i class="fas fa-envelope"></i> Email Me</a></li>
+        <li><a href="https://www.linkedin.com/in/253019-soham-mhatre" target="_blank">🔗 LinkedIn</a></li>
+        <li><a href="https://github.com/SoHaM-250143" target="_blank">💻 GitHub</a></li>
+        <li><a href="mailto:sohamrmhatre125@gmail.com">📧 Email Me</a></li>
       </ul>
     </div>
   </section>
@@ -307,22 +282,5 @@
   <footer>
     <p>&copy; 2025 Soham Mhatre. Designed with simplicity.</p>
   </footer>
-
-  <script>
-    // Scroll reveal animation
-    const sections = document.querySelectorAll('section');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 </body>
 </html>
